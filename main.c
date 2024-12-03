@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main ()
 {
-  char charcaterName[] = "Julio";
-
+  char characterName[] = "Julio";
+  int characterAge = 27;
+  printf("The main character is %s\n", characterName);
   return 0;
 }
