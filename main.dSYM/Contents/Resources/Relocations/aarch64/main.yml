@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/julio/repos/C_training/main'
+binary-path:     '/Users/julio/repos/C/main'
 relocations:     []
 ...
