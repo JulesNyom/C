@@ -1,9 +1,12 @@
 #include <stdio.h>
 int main ()
 {
-  int age;
-  printf("\nHow old are you?");
-  scanf("%d", &age);
-  printf("You are %d years old\n", age);
+  const double PI = 3.14159;
+  double radius;
+  double circumference;
+  printf("\nEnter radius of a circle : ");
+  scanf("%lf", &radius);
+  circumference = 2*PI*radius;
+  printf("circumference : %lf", circumference);
   return 0;
-}
+} 
