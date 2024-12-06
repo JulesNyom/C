@@ -5,8 +5,8 @@ int main ()
   float radius;
   double circumference;
   printf("\nEnter radius of a circle : ");
-  scanf("%lf", &radius);
+  scanf("%f", &radius);
   circumference = 2*PI*radius;
-  printf("circumference : %lf", circumference);
+  printf("circumference : %f", circumference);
   return 0;
 } 
