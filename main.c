@@ -1,15 +1,10 @@
 #include <stdio.h>
+#include <ctype.h>
+
 int main ()
 {
-  int age;
-  printf("Enter your age: ");
-  scanf("%d", &age);
-  if (age >= 18) { 
-    printf("You are now signed up!");
-  }
-  else {
-    printf("You are too young to sign up!");
-  }
-
+char unit;
+float temp;
+printf("\nIs the temperature in (F) or (C)?");
   return 0;
 } 
