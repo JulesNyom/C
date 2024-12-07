@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main ()
 {
-  const double PI = 3.14159;
-  float radius;
-  double circumference;
-  printf("\nEnter radius of a circle : ");
-  scanf("%f", &radius);
-  circumference = 2*PI*radius;
-  printf("circumference : %f", circumference);
+  int age;
+  printf("Enter your age: ");
+  scanf("%d", &age);
+  if (age >= 18) { 
+    printf("You are now signed up!");
+  }
+
   return 0;
 } 
