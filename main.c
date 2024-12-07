@@ -5,6 +5,20 @@ int main ()
 {
 char unit;
 float temp;
-printf("\nIs the temperature in (F) or (C)?");
+
+printf("\nIs the temperature in (F) or (C)?: ");
+scanf("%c", &unit);
+
+if (unit == 'C') {
+  printf("The temperature is currently in C");
+}
+else if (unit == 'F')
+{
+  printf("The temperature is currently in F ");
+}
+else {
+  
+}
+
   return 0;
 } 
