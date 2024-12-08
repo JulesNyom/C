@@ -2,22 +2,18 @@
 #include <ctype.h>
 #include <string.h>
 
-void Hello(void)  // Added void parameter for better practice
+double Hello(float heigth, float width)
 {
-    char tomate[10];
-    printf("Enter a tomate type: ");  // Added colon and space for better UX
-    scanf("%9s", tomate);  // Fixed three issues here
-    
-    if (strlen(tomate) >= 10) {  // Fixed brace placement
-        printf("Your tomate is too long\n");
-    }
-    else {  // Removed incorrect condition and fixed syntax
-        printf("Good choice\n");
-    }
+  printf("Enter your height here: ");
+  scanf("%f/n", &heigth);
+  printf("Enter your width here: ");
+  scanf("%f/n", &width);
+  return heigth + width;
 }
 
-int main(void)  // Added void parameter
+int main(void) 
 {
-    Hello();
+    double result = Hello(3,4);
+    printf("%f\n", result);
     return 0;
 }
