@@ -2,43 +2,46 @@
 #include <ctype.h>
 #include <string.h>
 
-double calculator (double a , double b)
-{ 
-  char operator;
-  double a;
-  double b;
+void calculator() { 
+    char operator;
+    float a;
+    float b;
 
-  scanf("%s\n", &operator);
-  printf("%s\n", "Enter an operator" );
-  scanf("%f\n", &a);
-  printf("%s\n", "Enter your first number");
-  scanf("%f\n", &b);
-  printf("%s\n", "Enter your second number");
+    printf("Enter an operator (+, -, /, x): ");
+    scanf(" %c", &operator);  // notice the space before %c to skip whitespace
 
-  if (operator = "+") {
-    double result = a + b;
-    printf("%f/n", result);
-  }
+    printf("Enter your first number: ");
+    scanf("%f", &a);
 
-  else if (operator = "-") {
-    double result = a - b;
-    printf("%f/n", result);
-  }
+    printf("Enter your second number: ");
+    scanf("%f", &b);
 
-  else if (operator = "/") {
-    double result = a / b;
-    printf("%f/n", result);
-  }
-
-  else (operator = "x") {
-    double result = a * b;
-    printf("%f/n", result);
-  }
-
+    if (operator == '+') {
+        double result = a + b;
+        printf("%.2f\n", result);
+    }
+    else if (operator == '-') {
+        double result = a - b;
+        printf("%.2f\n", result);
+    }
+    else if (operator == '/') {
+        if (b != 0) {
+            double result = a / b;
+            printf("%.2f\n", result);
+        } else {
+            printf("Error: Cannot divide by zero\n");
+        }
+    }
+    else if (operator == 'x' || operator == '*') {
+        double result = a * b;
+        printf("%.2f\n", result);
+    }
+    else {
+        printf("Error: Invalid operator\n");
+    }
 }
 
-int main(void) 
-{
-    
+int main(void) {
+    calculator();
     return 0;
 }
