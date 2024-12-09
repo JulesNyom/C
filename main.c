@@ -5,10 +5,12 @@
 double math (double number, double numbertwo) {
   
   printf("Enter a number");
-  scanf("%d", number);
+  scanf("%lf", &number);
 
   printf("Enter a second number");
-  scanf("%d", numbertwo);
+  scanf("%lf", &numbertwo);
+
+  double result = number + numbertwo;
 
   return 0;
 }
