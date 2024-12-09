@@ -4,13 +4,15 @@
 
 double math (double number, double numbertwo) {
   
-  printf("Enter a number");
+  printf("Enter a number: ");
   scanf("%lf", &number);
 
-  printf("Enter a second number");
+  printf("Enter a second number: ");
   scanf("%lf", &numbertwo);
 
   double result = number + numbertwo;
+
+  printf("%lf", result);
 
   return 0;
 }
