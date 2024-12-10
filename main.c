@@ -16,7 +16,6 @@ int main(void) {
     scanf("%lf", &num2);
     
     double result = math(num1, num2);
-    printf("%.2lf\n", result);  /
     
     return 0;
 }
