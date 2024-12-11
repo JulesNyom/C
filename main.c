@@ -2,20 +2,14 @@
 #include <ctype.h>
 #include <string.h>
 
-double math(double number, double numbertwo) {
-    return number + numbertwo;  // Actually use the parameters
-}
-
 int main(void) {
-    double num1, num2;
-    
-    printf("Enter a number: ");
-    scanf("%lf", &num1);
-    
-    printf("Enter a number 2: ");
-    scanf("%lf", &num2);
-    
-    double result = math(num1, num2);
+   
+   int numberOne = 00001000;
+   int numberTwo = 00010001;
+   int numberThree = 00001011;
+   int numberFour = 00100100;
+   int numberFive = 01000110;
+   int numberSix = 10000100;
     
     return 0;
 }  
