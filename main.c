@@ -12,10 +12,10 @@ int main(void) {
     printf("Enter a number: ");
     scanf("%lf", &num1);
     
-    printf("Enter a second number: ");
+    printf("Enter a number 2: ");
     scanf("%lf", &num2);
     
     double result = math(num1, num2);
     
     return 0;
-}
+}  
