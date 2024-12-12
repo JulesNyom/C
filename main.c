@@ -4,19 +4,10 @@
 
 int main(void) {
    
-   int numberOne = 00001000;
-   int numberTwo = 00010001;
-   int numberThree = 00001011;
-   int numberFour = 00100100;
-   int numberFive = 01000110;
-   int numberSix = 10000100;
-
-   int one = 2 ;
-   int two = 14 ;
-   int three = 11;
-   int four = 33 ;
-   int five = 26 ;
-   int six = 170;
+   char findALetter[][100] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+   char chooseANumber[][100] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"};
     
+    printf("Please choose a number and we will find the corresponding letter");
+
     return 0;
 }  
