@@ -24,7 +24,9 @@ int main(void) {
     scanf("%c", choosenLetter);
 
     for(int i = 0; i < sizeof(LetterNumber) / sizeof(letterNumberMap[1]); i++ ) {
-
+      if (choosenLetter == letterNumberMap[i].letter) {
+        printf("%d", letterNumberMap[i].number);
+      };
     }; 
 
     return 0;
