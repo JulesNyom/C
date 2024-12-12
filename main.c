@@ -4,9 +4,7 @@
 
 int main(void) {
 
-  char choosenLetter;
-   
-   typedef struct {
+  typedef struct {
        char letter;
        int number;
    } LetterNumber;
@@ -20,14 +18,22 @@ int main(void) {
        {'z', 26}
    };
 
-    printf("Please choose a number and we will find the corresponding letter");
+  char choosenLetter;
+   
+    printf("Please choose a number and we will find the corresponding letter: ");
     scanf("%c", &choosenLetter);
 
-    for(int i = 0; i < sizeof(LetterNumber) / sizeof(letterNumberMap[1]); i++ ) {
-      if (choosenLetter == letterNumberMap[i].letter) {
-        printf("%d", letterNumberMap[i].number);
-      };
-    }; 
+    int found = 0;  // To track if we found the letter
+for(int i = 0; i < sizeof(LetterNumber) / sizeof(letterNumberMap[0]); i++ ) {
+    if (choosenLetter == letterNumberMap[i].letter) {
+        printf("The corresponding number of your letter is %d", letterNumberMap[i].number);
+        found = 1;
+        break;  // Exit loop after finding the match
+    }
+}
+if (!found) {
+    printf("Letter not found!");
+}
 
     return 0;
 }  
