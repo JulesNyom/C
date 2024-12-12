@@ -21,7 +21,7 @@ int main(void) {
    };
 
     printf("Please choose a number and we will find the corresponding letter");
-    scanf("%c", choosenLetter);
+    scanf("%c", &choosenLetter);
 
     for(int i = 0; i < sizeof(LetterNumber) / sizeof(letterNumberMap[1]); i++ ) {
       if (choosenLetter == letterNumberMap[i].letter) {
