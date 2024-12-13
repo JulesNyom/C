@@ -20,12 +20,12 @@ int main(void) {
 
   char choosenLetter;
    
-    printf("Please choose a number and we will find the corresponding letter: ");
-    scanf("%c", &choosenLetter);
+    printf("Please choose a letter and we will find the corresponding number: ");
+    scanf(" %c", &choosenLetter);  // Add a space before the %c to read the newline character left in the input buffer
 
     int found = 0;  // To track if we found the letter
-for(int i = 0; i < sizeof(LetterNumber) / sizeof(letterNumberMap[0]); i++ ) {
-    if (choosenLetter == letterNumberMap[i].letter) {
+for(int i = 0; i < sizeof(letterNumberMap) / sizeof(letterNumberMap[0]); i++ ) {
+    if (tolower(choosenLetter) == letterNumberMap[i].letter) {
         printf("The corresponding number of your letter is %d", letterNumberMap[i].number);
         found = 1;
         break;  // Exit loop after finding the match
@@ -36,4 +36,4 @@ if (!found) {
 }
 
     return 0;
-}  
+}
