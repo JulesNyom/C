@@ -3,6 +3,8 @@
 #include <string.h>
 
 int main(void) {
+    
+    int age = 21;
 
     return 0;
 }
