@@ -1,26 +1,26 @@
-import random
-
-def BinarySearch(arr, target):
+def binarysearch (arr, target):
     left = 0
     right = len(arr) - 1
 
-    while left <= right:
+    while (left <= right):
         mid = (left + right) // 2
 
-        if arr[mid] == target:
+        if target == arr[mid]:
             return mid
         
-        elif arr[mid] < target:
-            left = mid + 1
+        elif target < mid:
+            right = mid - 1
 
-        else : right = mid - 1
+        else: left = mid + 1
 
-    return -1
+    return -1 
 
-Sorted_array = [10, 55, 89954, 365, 484, 9455, 99, 95, 655, 559, 655, 587, 440]
-target = 55
+Array = [12, 98, 87, 32, 455, 265, 78, 3565, 656]
+target = 78
 
-print(BinarySearch(Sorted_array, target))
+print(binarysearch(Array, target))
+
+    
         
 
 
