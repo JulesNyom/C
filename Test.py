@@ -3,23 +3,25 @@ def binarysearch (array, target):
     right = len(array) - 1 
 
     while (left <= right):
-        mid = (left + right) // 2 
+        mid = (left + right) // 2
 
         if target == array[mid]:
-            return mid
+            return mid 
         
         elif target < array[mid]:
-            right = mid - 1
+            right = mid - 1 
 
-        else : left = mid + 1
+        else: left = mid + 1 
 
     return -1 
+
+
 
 
 Array = [12, 98, 87, 32, 455, 265, 78, 3565, 656]
 Array.sort()
 print(Array)
-target = 656
+target = 12
 
 print(binarysearch(Array, target))
 
