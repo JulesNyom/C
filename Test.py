@@ -3,7 +3,7 @@ def binarysearch (arr, target):
     right = len(arr) - 1
 
     while (left <= right):
-        mid = (left + right) // 2
+        mid = (left + right) // 2 
 
         if target == arr[mid]:
             return mid
@@ -11,13 +11,11 @@ def binarysearch (arr, target):
         elif target < arr[mid]:
             right = mid - 1
 
-        else: left = mid + 1
-
-    return -1
+        else: left = mid + 1 
 
 array = [ 20, 8392, 2300, 1398, 38832, 20939, 339938, 287338]
 array.sort()
 print(array)
-newtarget = 20
+newtarget = 339938
 
 print(binarysearch(array, newtarget))
