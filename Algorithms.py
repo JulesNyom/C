@@ -32,3 +32,10 @@ result2 = binary_search(sorted_array, target2)
 
 print(f"Finding {target1}: Found at index {result1}")
 print(f"Finding {target2}: {result2} (not found)")
+
+def linear_search(arr, target):
+    
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
