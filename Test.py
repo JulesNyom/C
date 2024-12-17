@@ -17,16 +17,13 @@ def binarysearch (array, target):
 
 array = [ 20, 8392, 2300, 1398, 38832, 20939, 339938, 287338]
 array.sort()
-print(array)
-newtarget = 38832
+print(binarysearch(array, 20))
 
-print(binarysearch(array, newtarget))
-
-def linearsearch (array, target):
+def linearsearch(array, target):
     for i in range(len(array)):
         if target == array[i]:
             return i
     return -1
 
-Arraytwo = [ 20, 8392, 2300, 1398, 38832, 20939, 339938, 287338, 287338]
-print(linearsearch(Arraytwo, 20))
+arraytwo = [20, 39, 67, 88, 99]
+print(linearsearch(arraytwo, 39))
