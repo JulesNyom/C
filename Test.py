@@ -1,9 +1,9 @@
-def binarysearch (array, target):
+def binarysearch (array,target):
     left = 0
     right = len(array) - 1
 
     while (left <= right):
-        mid = (left + right) // 2
+        mid = (left +right) // 2
 
         if target == array[mid]:
             return mid
@@ -17,13 +17,16 @@ def binarysearch (array, target):
 
 array = [ 20, 8392, 2300, 1398, 38832, 20939, 339938, 287338]
 array.sort()
-print(binarysearch(array, 20))
+print(array)
+print(binarysearch(array, 2300))
 
-def linearsearch(array, target):
+def linearsearch (array, target):
+
     for i in range(len(array)):
         if target == array[i]:
-            return i
+            return array[i]
     return -1
 
+
 arraytwo = [20, 39, 67, 88, 99]
-print(linearsearch(arraytwo, 39))
+print(linearsearch(arraytwo, 88))
