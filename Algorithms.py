@@ -41,50 +41,24 @@ def linear_search(arr, target):
     return -1
 
 
-def merge_sort(arr):
-    # Base case: if array has 1 or fewer elements, it's already sorted
-    if len(arr) <= 1:
-        return arr
-    
-    # Find the middle point to divide the array into two halves
-    mid = len(arr) // 2
-    
-    # Split array into two halves
-    left = arr[:mid]
-    right = arr[mid:]
-    
-    # Recursively sort each half
-    left = merge_sort(left)
-    right = merge_sort(right)
-    
-    # Merge the sorted halves
-    return merge(left, right)
-
 def merge(left, right):
     result = []
-    left_idx = right_idx = 0
-    
-    # Compare elements from both arrays and merge them in sorted order
-    while left_idx < len(left) and right_idx < len(right):
-        if left[left_idx] <= right[right_idx]:
-            result.append(left[left_idx])
-            left_idx += 1
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
         else:
-            result.append(right[right_idx])
-            right_idx += 1
-    
-    # Add remaining elements from left array, if any
-    result.extend(left[left_idx:])
-    
-    # Add remaining elements from right array, if any
-    result.extend(right[right_idx:])
-    
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
     return result
 
-# Example usage
-if __name__ == "__main__":
-    # Test the algorithm
-    arr = [64, 34, 25, 12, 22, 11, 90]
-    sorted_arr = merge_sort(arr)
-    print(f"Original array: {arr}")
-    print(f"Sorted array: {sorted_arr}")
+def mergesort(list):
+    if len(list) < 2:
+        return list
+    middle = len(list) // 2  # Changed from / to //
+    left = mergesort(list[:middle])
+    right = mergesort(list[middle:])
+    return merge(left, right)
