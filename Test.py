@@ -7,8 +7,8 @@ def merge(left, right):
             result.append(left[i])
             i+=1
         else:
-            result.append(left[i])
-            i+=1
+            result.append(right[j])
+            j+=1
     result+=left[i:]
     result+=right[j:]
     return result
@@ -24,4 +24,6 @@ def mergesort(list):
 
 unsorted_array = [7, 2, 9, 1, 5, 6, 8, 3, 10, 4]
 
-print(mergesort(unsorted_array))
+sortedarray = mergesort(unsorted_array)
+print(sortedarray)
+
