@@ -6,9 +6,9 @@ def merge(left, right):
         if left[i] <= right[j]:
             result.append(left[i])
             i+=1
-        else: 
-            result.append(right[j])
-            j+=1
+        else:
+            result.append(left[i])
+            i+=1
     result+=left[i:]
     result+=right[j:]
     return result
@@ -16,26 +16,12 @@ def merge(left, right):
 def mergesort(list):
     if len(list) < 2:
         return list
+    
     mid = len(list) // 2
     left = mergesort(list[:mid])
     right = mergesort(list[mid:])
     return merge(left, right)
 
-arr = [5, 2, 8, 6, 1, 9, 4, 7, 3, 0, 30, 55, 82, 14]
-sortedarr = mergesort(arr)
-print(sortedarr)
+unsorted_array = [7, 2, 9, 1, 5, 6, 8, 3, 10, 4]
 
-def binarysearch(array, target):
-    left, right = 0, len(array) - 1
-
-    while left <= right:
-        mid = (left + right) // 2
-        if target == array[mid]:
-            return mid
-        elif target < array[mid]:
-            right = mid - 1 
-        else : left = mid + 1 
-
-    return -1
-
-print(binarysearch(sortedarr, 7))
+print(mergesort(unsorted_array))
