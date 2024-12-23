@@ -38,4 +38,3 @@ def mergesort(list):
     return merge(left, right)
 
 arr2 = [7, 2, 9, 1, 5, 8, 3, 6, 4, 10]
-print(mergesort(arr2))
