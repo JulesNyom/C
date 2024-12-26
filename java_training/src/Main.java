@@ -1,6 +1,8 @@
 public class Main {
     public static void main (String[] args) {
-        car car = new car();
+        code code = new code("Java", "Springboot" );
+        System.out.println(code.language);
+        code.coding();;
     }
 
 }
