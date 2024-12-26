@@ -19,8 +19,7 @@ def mergesort(list):
     mid = len(list) // 2
     left = mergesort(list[:mid])
     right = mergesort(list[mid:])
-    return merge(left, right)
+    return merge (left, right)
 
-# Create an array with 10 unsorted integers
-unsorted_array = [64, 34, 25, 12, 22, 11, 90, 50, 7, 38]
+unsorted_array = [42, 17, 8, 31, 5, 23, 56, 12, 39, 1]
 print(mergesort(unsorted_array))

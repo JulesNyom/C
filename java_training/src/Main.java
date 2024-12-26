@@ -1,15 +1,26 @@
-public class Main {  
-    public static int linearSearch(int[] array, int target) { 
-        for (int i = 0; i < array.length; i++) {  // Changed <= to 
-            if (target == array[i]) {
-                return i;
-            }
-        }
+
+public class Main {
+
+    static int binarysearch (int[] array, int target) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left <= right) {
+          int mid = (left + right) / 2;
+          if (target == array[mid]) {
+            return mid;
+          }
+          else if (target <= array[mid]) {
+            right = mid - 1;
+          }
+          else {
+            left = mid + 1;
+          }
+        };
         return -1;
     }
-
-    public static void main(String[] args) {  // Added main method
-        int[] numbers = {1, 2, 3, 4, 5, 6};
-        System.out.println(linearSearch(numbers, 20));
+    public static void main (String[] args) {
+        int[] sortedarray = {1, 2, 3, 4, 5, 6, 22, 43, 50};
+        System.out.println(binarysearch(sortedarray,22));
     }
 }
