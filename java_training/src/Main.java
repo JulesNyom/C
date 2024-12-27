@@ -1,19 +1,11 @@
 public class Main {
-    public static void main (String[] args) {
-
-        Code[] stockage = new Code[2];
-
-        Code code1 = new Code("Praline", "Java");
-        Code code2 = new Code("Chocolat blanc", "React");
-
-        stockage[0] = code1;
-        stockage[1] = code2;
-
-        System.out.println(stockage[0].language);
-
-        //Code[] stockage = {code1, code2};
-        
-
+ 
+    public static void main(String[] args) {
+        Fridge fridge = new Fridge();
+       Food food1 = new Food("hamburger");
+       Food food2 = new Food("Fries");
+       fridge.stock(food1);
+       fridge.stock(food2);
     }
 
 }
