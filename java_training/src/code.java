@@ -1,16 +1,13 @@
-public class code {
-    
+public class Code {
+
+    String food;
     String language;
-    String framework;
 
-    code(String language, String framework) {
+    Code (String food, String language) {
 
-        this.framework = framework;
+        this.food = food;
         this.language = language;
-    }
 
-    void coding () {
-        System.out.println("im currently using "+ this.language + " with "+ this.framework + " to code");
     }
 
 }
