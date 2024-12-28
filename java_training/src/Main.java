@@ -6,6 +6,7 @@ public class Main {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println(room.binarysearch(arr, 6));
         System.out.println(bathroom.binarysearch(arr, 8));
+        System.out.println(bathroom.binarysearch(arr, 10));
     }
 
 }
