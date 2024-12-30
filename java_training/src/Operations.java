@@ -1,8 +1,4 @@
-public class Operations extends Input {
-
-    Operations (int number1, int number2, String signs) {
-        super(number1, number2, signs);
-    }
+public class Operations {
 
     public int calculate (int number1, int number2, String signs) {
 
