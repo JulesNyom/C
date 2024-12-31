@@ -24,4 +24,27 @@ def mergesort(list):
 
 unsorted_array = [34, 7, 23, 32, 5, 62, 78, 1, 13, 9]
 
-print(mergesort(unsorted_array))
+sortedarray = (mergesort(unsorted_array))
+
+def binarysearch(array, target):
+    left = 0
+    right = len(array) -1 
+
+    while left < right:
+        mid = (left + right) // 2
+        if target == array[mid]:
+            return mid
+        elif target <= array[mid]:
+            right = mid -1
+        else : left = mid + 1
+    return -1 
+
+print(binarysearch(sortedarray, 34))
+
+def linearsearch(array, target):
+    for i in range(len(array)):
+        if target == array[i]:
+            return i
+    return -1
+
+print(linearsearch(unsorted_array, 34))
