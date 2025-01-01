@@ -25,5 +25,13 @@ public class Main {
         }
         
         scanner.close();
+
+        Binary binary = new Binary();
+        Linear linear = new Linear();
+
+        int [] array = {1,2,3,4,5,6,7,8,9};
+        
+        System.out.println(linear.linearsearch(array, 3));
+        
     }
 }
