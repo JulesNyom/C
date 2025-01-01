@@ -32,6 +32,7 @@ public class Main {
         int [] array = {1,2,3,4,5,6,7,8,9};
         
         System.out.println(linear.linearsearch(array, 3));
+        System.out.println(binary.binarysearch(array, 7));
         
     }
 }
