@@ -15,4 +15,12 @@ public void setStudent (int student) {
     this.student = student;
 }
 
+public int[] getCourse () {
+    return course;
+}
+
+public void setCourse (int[] course) {
+    this.course = course;
+}
+
 }
