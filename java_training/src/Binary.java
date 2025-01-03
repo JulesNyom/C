@@ -6,9 +6,11 @@ public class Binary {
 
         while (left <= right) {
             int mid = (left + right) / 2;
+
             if (target == array[mid]) {
                 return mid;
             }
+
             else if (target <= array[mid]) {
                 right = mid - 1;
             }
@@ -18,5 +20,6 @@ public class Binary {
         }
         return -1;
     }
+    
 }
 
