@@ -1,5 +1,8 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 public class Server {
@@ -13,9 +16,17 @@ public class Server {
 
     public void start () throws IOException {
         server = HttpServer.create(new InetSocketAddress(port),0);
-        server.createContext("/", new HomeHandler());
+        server.createContext("/", null);
         server.setExecutor(null);
         server.start();
-        System.out.println("Server started on port" + 8000);
+        System.out.println("Server is running on port 8000");
     }
+
+    static class HomeHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange exchange) throws IOException {
+            
+        }
+    }
+
 }
