@@ -1,13 +1,12 @@
 public class Linear {
 
-    int linearsearch (int[] array, int target) {
-        for (int i=0; i < array.length; i++) {
-            if (target == array[i]) {
+     int linearsearch (int[] array, int target) {
+        for (int i =0; i<array.length; i++) {
+            if (array[i] == target) {
                 return i;
             }
         }
         return -1;
-
     }
 
 }
