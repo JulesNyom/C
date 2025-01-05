@@ -3,7 +3,7 @@ import java.net.InetSocketAddress;
 
 import com.sun.net.httpserver.HttpServer;
 
-public class Server extends HomeHandler {
+public class Server {
 
     private HttpServer server;
     private final int port;
@@ -13,10 +13,7 @@ public class Server extends HomeHandler {
     }
 
     public void start () throws IOException {
-        server = HttpServer.create(new InetSocketAddress(port),0);
-        server.createContext("/", new HomeHandler());
-        server.setExecutor(null);
-        server.start();
-        System.out.println("Server is running on port 8000");
+        server = HttpServer.create(new InetSocketAddress(port), 0);
+        server.createContext("/", )
     }
 }
