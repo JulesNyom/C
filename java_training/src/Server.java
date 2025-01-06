@@ -11,12 +11,12 @@ public class Server {
     public Server (int port) {
         this.port = port;
     }
-
+    
     public void start () throws IOException {
         server = HttpServer.create(new InetSocketAddress(port), 0);
-        server.createContext("/", new HomeHandler());
+        server.createContext("/", new Handler());
         server.setExecutor(null);
         server.start();
-        System.out.println("Server is running on port 8000");
+        System.out.println("The server is running boy! port 8000");
     }
 }
