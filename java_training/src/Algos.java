@@ -30,11 +30,9 @@ public class Algos {
     static void merge(int[] leftArray, int[] rightArray, int[] array) {
        
     }
-
-    public int binarysearch(int[]array, int target) {
+    public int binarysearch (int[] array, int target) {
         int left = 0;
-        int right = array.length - 1;
-
+        int right = array.length;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (target == array[mid]) {
@@ -47,18 +45,18 @@ public class Algos {
                 mid = left + 1;
             }
         }
-
         return -1;
     }
 
-    public int linearsearch (int[] array, int target) {
-        for (int i=0; i<=array.length; i++) {
-            if (target == array[i]) {
-                return -1;
-            }
+   public int linearsearch (int[] array, int target) {
+    for (int i=0; i<array.length; i++) {
+        if (target == array[i]) {
+            return i;
         }
-        return -1;
     }
+
+    return -1;
+   }
     
 
 }
