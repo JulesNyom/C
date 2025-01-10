@@ -1,7 +1,8 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-import com.sun.net.httpserver.HttpServer;
+import com.sun.net.httpserver.*;
+
 public class Server {
 
     private HttpServer server;
@@ -16,6 +17,7 @@ public class Server {
         server.createContext("/", new HomeHandler());
         server.setExecutor(null);
         server.start();
-        System.out.println("Server is running on port 8000");
+        System.out.println("Server is running boy");
+        
     }
 }
