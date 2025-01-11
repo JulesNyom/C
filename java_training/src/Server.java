@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-import com.sun.net.httpserver.*;
+import com.sun.net.httpserver.*;;
 
 public class Server {
 
@@ -12,12 +12,11 @@ public class Server {
         this.port = port;
     }
 
-    public void start () throws IOException {
+    public void start () throws IOException{
         server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/", new HomeHandler());
         server.setExecutor(null);
         server.start();
-        System.out.println("Server is running boy");
-        
+        System.out.println("Good, the server is running boy");
     }
 }
