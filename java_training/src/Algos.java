@@ -36,7 +36,7 @@ public class Algos {
         int right = array.length -1;
 
         while (left <= right) {
-            int mid = (left + right) / 2
+            int mid = (left + right) / 2;
             if ( target == array[mid]) {
                 return mid;
             }
