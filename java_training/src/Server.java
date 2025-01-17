@@ -14,8 +14,8 @@ public class Server {
     public void start () throws IOException {
         server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/", new HomeHandler());
-        server.setExecutor(null);
+        server.getExecutor();
         server.start();
-        System.out.println("Server is running bro");
+        System.out.println("the server is running boy");
     }
 }
