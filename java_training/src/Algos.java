@@ -9,7 +9,7 @@ public class Algos {
         int right = array.length -1;
 
         while (left <= right) {
-            int mid = (left + right) / 2
+            int mid = (left + right) / 2;
             if (target == array[mid]) {
                 return mid;
             }
@@ -22,9 +22,8 @@ public class Algos {
         }
         return -1;
     }
-    
     public int linearsearch (int[] array, int target) {
-        for (int i=0; i<array.length; i++ ) {
+        for (int i = 0; i<array.length; i++) {
             if (target == array[i]) {
                 return i;
             }
