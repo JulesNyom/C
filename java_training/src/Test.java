@@ -1,5 +1,12 @@
 public class Test {
 
+    public void printArray(int[] array) {
+        for(int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " "); 
+        }
+        System.out.println();
+    }
+
     public void mergeSort(int[] array) {
         int length = array.length;
 
@@ -31,10 +38,10 @@ public class Test {
 
         while (l < leftSize && r < rightSize) {
             if(leftArray[l] < rightArray[r]) {
-                array[i++] = leftArray[l++]
+                array[i++] = leftArray[l++];
             }
             else {
-                array[i++] = rightArray[r++]
+                array[i++] = rightArray[r++];
             }
         }
         while (l < leftSize) {
