@@ -9,7 +9,7 @@ public class Server {
     private HttpServer server;
     private int port;
 
-    public void server (int port) {
+    public Server (int port) {
         this.port = port;
     }
 
