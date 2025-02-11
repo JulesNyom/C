@@ -1,14 +1,15 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-import com.sun.net.httpserver.*;
+import com.sun.net.httpserver.HttpServer;
+
 
 public class Server {
 
     private HttpServer server;
-    private final int port;
+    private int port;
 
-    public Server (int port) {
+    public void server (int port) {
         this.port = port;
     }
 
@@ -17,6 +18,6 @@ public class Server {
         server.createContext("/", new HomeHandler());
         server.setExecutor(null);
         server.start();
-        System.out.println("Server is running boy!");
+        System.out.println("Server is running on port 8081");
     }
 }
