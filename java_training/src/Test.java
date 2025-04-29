@@ -56,13 +56,13 @@ public class Test {
         int left = 0;
         int right = array.length -1;
 
-        while (left > right) {
+        while (left <= right) {
             int mid = (left + right) / 2;
 
             if (target == array[mid]) {
                 return mid;
             }
-            else if (target <= array[mid]) {
+            else if (target < array[mid]) {
                 right = mid - 1;
             }
             else {

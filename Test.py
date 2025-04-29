@@ -1,25 +1,23 @@
-def merge(left, right):
+def mergeSort (left, right) :
     result = []
-    i, j = 0, 0
-    while i< len(left) and j< len(right):
+    i = 0
+    j = 0
+
+    while i < len(left) and j < len(right):
         if left[i] <= right[j]:
             result.append(left[i])
             i+=1
-        else : 
+        else:
             result.append(right[j])
             j+=1
     result+=left[i:]
     result+=right[j:]
-    return result 
+    return result
 
-def mergesort(list):
+def merge(list):
     if len(list) < 2:
         return list
-    mid = len(list) // 2;
-    left = mergesort(list[:mid])
-    right = mergesort(list[mid:])
-    return merge(left, right)
-
-unsorted = [64, 34, 25, 12, 22, 11, 90, 75, 5, 1]
-
-print(mergesort(unsorted))
+    mid = len(list) // 2
+    left = list[:mid]
+    right = list[mid:]
+    return left + right
