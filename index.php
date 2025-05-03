@@ -7,11 +7,5 @@
 </head>
 <body>
     
-<p>Hello world!</p>
-<?php echo "Hello PHP <br>";
-echo "Hello ".' live';
-
-
-?>
 </body>
 </html>
