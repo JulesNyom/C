@@ -1,23 +1,6 @@
-def mergeSort (left, right) :
-    result = []
-    i = 0
-    j = 0
+def binary(target, array):
+    left = 0
+    right = len(array) -1
 
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i+=1
-        else:
-            result.append(right[j])
-            j+=1
-    result+=left[i:]
-    result+=right[j:]
-    return result
-
-def merge(list):
-    if len(list) < 2:
-        return list
-    mid = len(list) // 2
-    left = list[:mid]
-    right = list[mid:]
-    return left + right
+    while (left < right):
+        mid = (left + right) // 2
