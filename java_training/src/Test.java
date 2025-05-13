@@ -33,4 +33,10 @@ public class Test {
         return -1;
     }
 
+    String pasta;
+
+    public void test () {
+        this.pasta = "macaroni";
+    }
+
 }
